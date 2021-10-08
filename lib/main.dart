@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/cupertino.dart';
+import 'dart:ui';
 void main() {
   runApp(const MyApp());
 }
@@ -76,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
              Container(
                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                child: TextField(
-                 obscureText: true,
+
                  decoration: InputDecoration(
                    border: OutlineInputBorder(),
                    labelText: 'Tên đăng nhập',
@@ -103,37 +104,22 @@ class _MyHomePageState extends State<MyHomePage> {
                  ),
                ),
              ),
-           ],
-      ),
 
-    /*  child: Padding(
-       padding: const EdgeInsets.all(25.0),
-
-        child: Column(
-
-
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Username:',
-
-            ),
-            Text(
-              '',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            const TextField(
-              decoration: InputDecoration(hintText: 'Tên đăng nhập',border: OutlineInputBorder(
-              ),
-              ),
-            ),
-          ],
-
+        OutlinedButton(
+          onPressed: null,
+          style: ButtonStyle(
+            shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
+          ),
+          child: Text('Đăng nhập', style: TextStyle(color: Colors.blue),),
         ),
-      ),*/
+
+        ],
+      ),
+
+
 
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: null,
         tooltip: 'Increment',
