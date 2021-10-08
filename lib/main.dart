@@ -120,6 +120,11 @@ class _MyHomePageState extends State<MyHomePage> {
                  ),
                ),
              ),
+            Container(
+              padding: EdgeInsets.fromLTRB(135, 10, 135, 0),
+              child:OutlinedButton(onPressed: (){}, child: Text('Đăng nhập'),style:OutlinedButton.styleFrom(shape:StadiumBorder(),),),
+            ),
+            //OutlinedButton(onPressed: (){}, child: Text('Đăng nhập'),style:OutlinedButton.styleFrom(shape:StadiumBorder(),),),
            ],
       ),
 
