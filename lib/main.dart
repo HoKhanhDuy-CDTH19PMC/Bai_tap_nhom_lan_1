@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,42 +61,58 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(10, 120, 10, 0),
+
+        padding: EdgeInsets.fromLTRB(10, 70, 10, 0),
           child: ListView(
            children: <Widget>[
         Container(
+          margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
           alignment: Alignment.center,
           padding: EdgeInsets.all(10),
     child: Text(
       'Username',
+      style: TextStyle(fontWeight: FontWeight.bold,color: Colors.cyan,fontSize: 20),
     ),
 
 
 
         ),
              Container(
+
                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                child: TextField(
-                 obscureText: true,
-                 decoration: InputDecoration(
+                 //inputFormatters: [
+                  // FilteringTextInputFormatter.allow(RegExp("a-z A-Z 0-9")),],
+
+              maxLength: 15,
+                 //k the hien password
+                 obscureText: false,
+                 decoration:InputDecoration(
                    border: OutlineInputBorder(),
                    labelText: 'Tên đăng nhập',
+                   hintText:'Tên đăng nhập',
                  ),
                ),
              ),
              Container(
+
                alignment: Alignment.center,
                padding: EdgeInsets.all(10),
                child: Text(
+
                  'Password',
+                 style: TextStyle(fontWeight: FontWeight.bold,color: Colors.cyan,fontSize: 20),
                ),
 
 
 
              ),
              Container(
+
                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                child: TextField(
+
+                 maxLength:12,
                  obscureText: true,
                  decoration: InputDecoration(
                    border: OutlineInputBorder(),
